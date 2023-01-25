@@ -62,14 +62,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
             }, child: Text('SIGN UP'))
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Name',
-            ),
-            BottomNavigationBarItem(icon: Icon(Icons.call), label: 'call')
-          ],
-        ));
+    );
   }
 }

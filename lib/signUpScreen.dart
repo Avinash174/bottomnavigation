@@ -15,76 +15,63 @@ class _SignUpScreenState extends State<SignUpScreen> {
         title: Text('Sign Up'),
         centerTitle: true,
       ),
-      body:Padding(
-        padding: EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-           children: [
-             TextFormField(
-               decoration: InputDecoration(
-                 labelText: 'Enter First Name',
-                 border: OutlineInputBorder(
-                   borderRadius: BorderRadius.circular(20.0),
-                 )
-               ),
-             ),
-             SizedBox(
-               height: 20,
-             ),
-             TextFormField(
-               decoration: InputDecoration(
-                   labelText: 'Enter Last Name',
-                   border: OutlineInputBorder(
-                     borderRadius: BorderRadius.circular(20.0),
-                   )
-               ),
-             ),
-             SizedBox(
-               height: 20,
-             ),
-             TextFormField(
-               decoration: InputDecoration(
-                   labelText: 'Enter Mobile Number',
-                   border: OutlineInputBorder(
-                     borderRadius: BorderRadius.circular(20.0),
-                   )
-               ),
-             ),
-             SizedBox(
-               height: 20,
-             ),
-             TextFormField(
-               decoration: InputDecoration(
+      body: Container(
+        child: Form(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Enter Email',
+                    prefixIcon: Icon(Icons.email),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Enter Mobile Number',
+                    prefixIcon: Icon(Icons.phone),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                       decoration: InputDecoration(
                    labelText: 'Enter Password',
+                   prefixIcon: Icon(Icons.lock),
                    border: OutlineInputBorder(
-                     borderRadius: BorderRadius.circular(20.0),
-                   )
-               ),
-             ),
-             SizedBox(
-               height: 20,
-             ),
-             TextFormField(
-               decoration: InputDecoration(
-                   labelText: 'Re-Enter Password',
-                   border: OutlineInputBorder(
-                     borderRadius: BorderRadius.circular(20.0),
-                   )
-               ),
-             ),
-             SizedBox(
-               height: 20,
-             ),
-             ElevatedButton(onPressed: (){}, child: Text('SIGN UP'),),
-             SizedBox(
-               height: 20,
-             ),
-             ElevatedButton(onPressed: (){Navigator.pop(context);}, child: Text('Already Have A Account'),),
-           ],
+                     borderRadius: BorderRadius.circular(20),
+                   ),
+                 ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(onPressed:(){}, child: Text('Sign Up'),
+                ),SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(onPressed: (){
+                  Navigator.pop(context);
+                }, child: Text('Already Have A Account'))
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+
